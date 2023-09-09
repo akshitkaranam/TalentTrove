@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+  api:
+    image: node:18.17.1-alpine3.18
+    working_dir: /usr/src/app
+    volumes:
+      - ../server/:/usr/src/app
+
+  client:
+    image: node:18.17.1-alpine3.18
+    working_dir: /usr/src/app
+    volumes:
+      - ../client/:/usr/src/app/
